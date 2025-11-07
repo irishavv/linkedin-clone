@@ -9,7 +9,7 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://linkedin-clone-two-lac.vercel.app/api/auth/login', { email, password });
+      const response = await axios.post('https://linkedin-clone-two-lac.vercel.app/api/auth/login', { email, password });
       localStorage.setItem('token', response.data.token);
       window.location.href = '/';
     } catch (err) {

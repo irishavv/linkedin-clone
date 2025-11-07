@@ -12,7 +12,7 @@ function CreatePost({ onPostCreated }) {
     try {
       const token = localStorage.getItem('token');
       const response = await axios.post(
-        'https//linkedin-clone-two-lac.vercel.app/',
+        'https://linkedin-clone-two-lac.vercel.app/api/posts',
         { text },
         { headers: { Authorization: `Bearer ${token}` } }
       );
