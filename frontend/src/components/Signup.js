@@ -10,7 +10,7 @@ function Signup() {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/signup', { name, email, password });
+      const response = await axios.post('http://linkedin-clone-two-lac.vercel.app/api/auth/signup', { name, email, password });
       localStorage.setItem('token', response.data.token);
       window.location.href = '/';
     } catch (err) {

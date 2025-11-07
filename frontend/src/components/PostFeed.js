@@ -8,7 +8,7 @@ function PostFeed({ newPost }) {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/posts');
+        const response = await axios.get('http://linkedin-clone-two-lac.vercel.app/api/posts');
         setPosts(response.data);
       } catch (error) {
         console.error('Error fetching posts:', error);
@@ -22,7 +22,7 @@ function PostFeed({ newPost }) {
     if (newPost) {
       // Re-fetch posts to get the populated user name
       const fetchPosts = async () => {
-        const response = await axios.get('http://localhost:5000/api/posts');
+        const response = await axios.get('http://linkedin-clone-two-lac.vercel.app/api/posts');
         setPosts(response.data);
       };
       fetchPosts();
